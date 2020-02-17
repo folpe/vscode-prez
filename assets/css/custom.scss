@@ -1,0 +1,12 @@
+.reveal {
+  .imageWrapper {
+    width: 10%;
+    margin: auto;
+    img {
+      object-fit: contain;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,50 +1,299 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/league.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.type = 'text/css'
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css'
+      document.getElementsByTagName('head')[0].appendChild(link)
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- INTRO -->
+        <section>
+          <h1>VSCode Setup</h1>
+          <div class="imageWrapper">
+            <img src="assets/img/VSCode-logo.png" alt="log vscode" />
+          </div>
+          <h4>Un setup vscode pour figaro horizon</h4>
+        </section>
+        <!-- SUMMARY -->
+        <section>
+          <h3>Sommaire</h3>
+          <ol>
+            <li>Les avantages</li>
+            <li>Les extensions</li>
+            <li>Les paramètres</li>
+          </ol>
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your
+            presentation, but you can see them if you open the speaker notes
+            window (hit »S« on your keyboard).
+          </aside>
+        </section>
+        <!-- AVANTAGES -->
+        <section><h3>Les avantages</h3></section>
+        <section>
+          <section>
+            <h6>Avantages de vscode</h6>
+            <ul>
+              <li>Rapide à lancer & Très rapide à l’usage</li>
+              <li>Syntaxes ES modernes et React intégrées</li>
+              <li>Git intégré (et plutôt pas mal, en plus)</li>
+              <li>Débogueur Node intégré</li>
+              <li>
+                Complétion de code plutôt qualitative
+              </li>
+              <li>Emmet intégré</li>
+            </ul>
+          </section>
+          <section>
+            <h6>Avantages de vscode (suite)</h6>
+            <ul>
+              <li>Excellente UX de paramétrage</li>
+              <li>
+                Préférences de workspace (partage de configuration)
+              </li>
+              <li>Nombreuses extensions « indispensables » disponibles</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Extensions -->
+        <section><h3>Les extensions</h3></section>
+        <section>
+          <section>
+            <h6>Extensions importantes</h6>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Auto Close Tag</td>
+                  <td>Ferme automatiquement les balises</td>
+                </tr>
+                <tr>
+                  <td>Auto Rename Tag</td>
+                  <td>Synchronise automatiquement la balise opposée</td>
+                </tr>
+                <tr>
+                  <td>ESLint</td>
+                  <td>
+                    Le linter incontournable pour analyser le code
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h6>Extensions secondaire</h6>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Apples</td>
+                  <td>$1</td>
+                </tr>
+                <tr>
+                  <td>Lemonade</td>
+                  <td>$2</td>
+                </tr>
+                <tr>
+                  <td>Bread</td>
+                  <td>$3</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h4>Installation des extensions</h4>
+            <p>Pour installer facilement les extensions</p>
+            <pre><code data-trim contenteditable>
+npx nomDuPaquet
+            </code></pre>
+            <p>
+              ou si la commande a dejà été exécutée par le passé, afin d'obtenir
+              la dernière version
+            </p>
+            <pre><code data-trim contenteditable>
+npx --ignore-existing nomDuPaquet
+            </code></pre>
+          </section>
+        </section>
+        <!-- Settings -->
+        <section><h3>Les paramètres</h3></section>
+        <section>
+          <section>
+            <h3>Settings</h3>
+            <p>
+              Paramètres utilisateur vs Paramètres espace de travail
+            </p>
+            <aside class="notes">
+              VSCode fournit deux champs d'application différents pour les
+              réglages :
+              <p>
+                Paramètres utilisateur - Paramètres qui s'appliquent globalement
+                à toute instance de VS Code que vous ouvrez.
+              </p>
+              <p>
+                Paramètres de l'espace de travail - Paramètres stockés dans
+                votre espace de travail et qui ne s'appliquent que lorsque
+                l'espace de travail est ouvert.
+              </p>
+              <p>
+                Les paramètres de l'espace de travail remplacent les paramètres
+                de l'utilisateur. Les paramètres de l'espace de travail sont
+                spécifiques à un projet et peuvent être partagés entre les
+                développeurs d'un projet.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h6>Example</h6>
+            <pre><code data-trim>
+{
+  // Nicer debugging
+  "debug.inlineValues": true,
 
-		<script src="js/reveal.js"></script>
+  // Whitespace shouldn't pollute diffs (git diff -w)
+  "diffEditor.ignoreTrimWhitespace": true,
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+  // Font and spacing (even w/o Prettier/ESLint)
+  "editor.fontFamily":
+    "'Operator Mono SSm', 'Source Code Pro', Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace",
+  // For Prettier et al.
+  "editor.formatOnSave": true,
+  // Indent with 2 spaces!
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  // Minimaps are useless
+  "editor.minimap.enabled": false,
+  // Alt for click-based multi-cursor
+  "editor.multiCursorModifier": "alt",
+  // Don't sroll pass the last line
+  "editor.scrollBeyondLastLine": false,
+  // Snippets should appear above IntelliSense
+  "editor.snippetSuggestions": "top",
+  // A slightly fatter cursor is more visible
+  "editor.cursorWidth": 3,
+  // Word wrapping is usually best by default
+  "editor.wordWrap": "on",
+
+  // Hide Open Editors pane
+  "explorer.openEditors.visible": 0,
+
+  // Open any new buffer as Markdown. Super handy.
+  "files.defaultLanguage": "markdown",
+
+  // `.snap` files (Jest snapshots) should use JSX mode by default
+  "files.associations": {
+    "*.snap": "javascriptreact"
+  },
+
+  // Exclusions from the explorer
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.vscode-setup-settings-merged": true
+  },
+
+  // Make diffs easier, whitespace-wise
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // Only search case sensitivively for patterns that are
+  // not 100% lowercase
+  "search.smartCase": true,
+
+  // Fat scrollbacks are more useful
+  "terminal.integrated.scrollback": 100000,
+
+  // Disable Preview when using Quick Open
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
+  // Show tabs again, dammit!
+  "workbench.editor.showTabs": true,
+
+  // Use cool icon theme
+  "workbench.iconTheme": "vscode-great-icons",
+
+  // Make the current tab stand out better
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#08c"
+  },
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "javascriptreact": "javascript"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // Flow
+  "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false,
+
+  "markdown.extension.toc.githubCompatibility": true,
+
+  // Prettier & ESLint
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": false,
+  "javascript.format.enable": false
+}
+            </code></pre>
+          </section>
+        </section>
+        <section><h1>Merci</h1></section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/highlight/highlight.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+        ],
+      })
+    </script>
+  </body>
 </html>
